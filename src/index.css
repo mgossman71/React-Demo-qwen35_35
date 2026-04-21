@@ -1,0 +1,48 @@
+/* Tailwind CSS - using v3 compatible directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ffl-primary hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-ffl-gold hover:bg-yellow-600 text-slate-900 font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-ffl-primary text-ffl-primary hover:bg-ffl-primary hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 border border-slate-200 hover:shadow-xl transition-shadow duration-300;
+  }
+  
+  .section-header {
+    @apply text-center mb-12;
+  }
+  
+  .section-title {
+    @apply text-4xl font-bold text-slate-900 mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-slate-600 max-w-2xl mx-auto;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-ffl-gold/10 text-ffl-gold;
+  }
+}

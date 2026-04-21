@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  mjg-firearms:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    networks:
+      - mjg-network
+
+networks:
+  mjg-network:
+    driver: bridge
