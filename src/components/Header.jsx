@@ -17,7 +17,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <span className="text-3xl">🔫</span>
+            <span className="text-3xl">🛡️</span>
             <span className="text-xl font-bold text-slate-900">MJG Firearms</span>
           </div>
 

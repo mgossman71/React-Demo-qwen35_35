@@ -6,7 +6,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <span className="text-2xl">🔫</span>
+              <span className="text-2xl">🛡️</span>
               <span className="text-xl font-bold">MJG Firearms</span>
             </div>
             <p className="text-slate-300 text-sm">
