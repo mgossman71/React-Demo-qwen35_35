@@ -14,7 +14,7 @@ export default function Eligibility() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {siteData.eligibility.map((item, index) => (
-            <div key={index} className="card border-l-4 border-ffl-gold">
+            <div key={index} className="card border-l-4 border-amber-500">
               <div className="flex items-start space-x-4">
                 <div className="text-3xl flex-shrink-0">
                   {index < 2 ? '⚖️' : index < 4 ? '🆔' : '✅'}
@@ -23,7 +23,7 @@ export default function Eligibility() {
                   <h3 className="font-semibold text-lg text-slate-900 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-slate-600">
+                  <p className="text-slate-600 leading-relaxed">
                     {item.description}
                   </p>
                 </div>

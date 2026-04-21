@@ -1,56 +1,112 @@
-/* Tailwind CSS - using v3 compatible directives */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Modern Design System - MJG Firearms */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-size: 16px;
   }
   
   body {
-    @apply bg-slate-50 text-slate-900 antialiased;
+    @apply bg-slate-50 text-slate-800 antialiased leading-relaxed;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold;
+  }
+  
+  h2 {
+    @apply text-3xl sm:text-4xl;
+  }
+  
+  h3 {
+    @apply text-xl sm:text-2xl;
+  }
+  
+  p {
+    @apply leading-7;
   }
 }
 
 @layer components {
+  /* Primary Button - Amber gradient */
   .btn-primary {
-    @apply bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1;
+    @apply bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-700 hover:to-amber-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
   }
   
+  /* Secondary Button - Slate with border */
   .btn-secondary {
-    @apply bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-800 hover:to-slate-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl border border-slate-500;
+    @apply bg-slate-800 hover:bg-slate-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 border border-slate-600 hover:border-slate-500;
   }
   
+  /* Outline Button */
   .btn-outline {
-    @apply border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300;
+    @apply border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300;
   }
   
+  /* Card Design - Clean with subtle shadow */
   .card {
-    @apply bg-white rounded-xl shadow-lg p-8 border-2 border-slate-100 hover:border-amber-400 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1;
+    @apply bg-white rounded-xl shadow-md p-8 border border-slate-200 hover:shadow-xl hover:border-amber-300 transition-all duration-300;
   }
   
+  /* Section Headers */
   .section-header {
     @apply text-center mb-16;
   }
   
   .section-title {
-    @apply text-5xl font-black text-slate-900 mb-4 tracking-tight;
+    @apply text-4xl sm:text-5xl font-bold text-slate-900 mb-6 tracking-tight;
   }
   
   .section-subtitle {
-    @apply text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed;
+    @apply text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed;
   }
   
+  /* Badge - Modern pill style */
   .badge {
-    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 shadow-sm;
+    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-amber-100 text-amber-800 shadow-sm;
   }
   
+  /* Gradient Hero Background */
   .gradient-hero {
-    @apply bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900;
+    @apply bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white;
   }
   
+  /* Glass Card Effect */
   .glass-card {
-    @apply bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 shadow-2xl;
+    @apply bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-2xl;
   }
+  
+  /* Feature Icon Box */
+  .feature-icon {
+    @apply w-16 h-16 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-3xl shadow-lg;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-400 rounded-full hover:bg-slate-500;
+}
+
+/* Focus states for accessibility */
+*:focus-visible {
+  @apply outline-2 outline-amber-500 outline-offset-2;
 }

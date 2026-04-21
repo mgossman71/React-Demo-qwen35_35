@@ -7,11 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        'slate-900': '#0f172a',
-        'slate-800': '#1e293b',
-        'amber-600': '#d97706',
-        'orange-600': '#ea580c',
-        'bronze-500': '#b45309',
+        'slate': {
+          '50': '#f8fafc',
+          '100': '#f1f5f9',
+          '200': '#e2e8f0',
+          '300': '#cbd5e1',
+          '400': '#94a3b8',
+          '500': '#64748b',
+          '600': '#475569',
+          '700': '#334155',
+          '800': '#1e293b',
+          '900': '#0f172a',
+          '950': '#020617',
+        },
+      },
+      fontFamily: {
+        'sans': ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Inter', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
     },
   },

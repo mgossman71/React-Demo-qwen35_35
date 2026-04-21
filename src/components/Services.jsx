@@ -15,18 +15,20 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {siteData.services.map((service, index) => (
             <div key={index} className="card">
-              <div className="text-4xl mb-4">{['💼', '🛒', '📜', '🏛️'][index]}</div>
+              <div className="feature-icon mb-6">
+                {['💼', '🛒', '📜', '🏛️'][index]}
+              </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">
                 {service.title}
               </h3>
-              <p className="text-slate-600 mb-4">{service.description}</p>
+              <p className="text-slate-600 mb-4 leading-relaxed">{service.description}</p>
               <div className="mb-4">
-                <span className="text-ffl-gold font-semibold">{service.fees}</span>
+                <span className="text-amber-600 font-bold text-lg">{service.fees}</span>
               </div>
               <ul className="space-y-2">
                 {service.details.map((detail, idx) => (
                   <li key={idx} className="flex items-start space-x-2 text-sm text-slate-600">
-                    <span className="text-ffl-primary mt-1">✓</span>
+                    <span className="text-amber-500 mt-1 flex-shrink-0">✓</span>
                     <span>{detail}</span>
                   </li>
                 ))}

@@ -13,12 +13,12 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 tracking-tight">
               Professional{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">FFL Firearm</span>
               {' '}Transfer Services
             </h1>
-            <p className="text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed">
               <span className="text-white font-semibold">{siteData.tagline}</span> Safe, secure, and fully compliant with all federal and state regulations.
             </p>
             
