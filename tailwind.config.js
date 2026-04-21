@@ -7,9 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'ffl-dark': '#1a1a2e',
-        'ffl-primary': '#e63946',
-        'ffl-gold': '#c9a227',
+        'slate-900': '#0f172a',
+        'slate-800': '#1e293b',
+        'amber-600': '#d97706',
+        'orange-600': '#ea580c',
+        'bronze-500': '#b45309',
       },
     },
   },

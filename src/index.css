@@ -15,34 +15,42 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-ffl-primary hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+    @apply bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1;
   }
   
   .btn-secondary {
-    @apply bg-ffl-gold hover:bg-yellow-600 text-slate-900 font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+    @apply bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-800 hover:to-slate-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl border border-slate-500;
   }
   
   .btn-outline {
-    @apply border-2 border-ffl-primary text-ffl-primary hover:bg-ffl-primary hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+    @apply border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300;
   }
   
   .card {
-    @apply bg-white rounded-xl shadow-lg p-6 border border-slate-200 hover:shadow-xl transition-shadow duration-300;
+    @apply bg-white rounded-xl shadow-lg p-8 border-2 border-slate-100 hover:border-amber-400 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1;
   }
   
   .section-header {
-    @apply text-center mb-12;
+    @apply text-center mb-16;
   }
   
   .section-title {
-    @apply text-4xl font-bold text-slate-900 mb-4;
+    @apply text-5xl font-black text-slate-900 mb-4 tracking-tight;
   }
   
   .section-subtitle {
-    @apply text-xl text-slate-600 max-w-2xl mx-auto;
+    @apply text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed;
   }
   
   .badge {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-ffl-gold/10 text-ffl-gold;
+    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 shadow-sm;
+  }
+  
+  .gradient-hero {
+    @apply bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900;
+  }
+  
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 shadow-2xl;
   }
 }
