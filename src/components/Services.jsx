@@ -14,11 +14,11 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {siteData.services.map((service, index) => (
-            <div key={index} className="card">
-              <div className="feature-icon mb-6">
+            <div key={index} className="card group hover:border-amber-500 transition-all duration-300 hover:-translate-y-2">
+              <div className="feature-icon mb-6 group-hover:scale-110 transition-transform duration-300">
                 {['💼', '🛒', '📜', '🏛️'][index]}
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
+              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors">
                 {service.title}
               </h3>
               <p className="text-slate-600 mb-4 leading-relaxed">{service.description}</p>
@@ -27,8 +27,8 @@ export default function Services() {
               </div>
               <ul className="space-y-2">
                 {service.details.map((detail, idx) => (
-                  <li key={idx} className="flex items-start space-x-2 text-sm text-slate-600">
-                    <span className="text-amber-500 mt-1 flex-shrink-0">✓</span>
+                  <li key={idx} className="flex items-start space-x-2 text-sm text-slate-600 group-hover:text-slate-700 transition-colors">
+                    <span className="text-amber-500 mt-1 flex-shrink-0 group-hover:scale-125 transition-transform">✓</span>
                     <span>{detail}</span>
                   </li>
                 ))}
