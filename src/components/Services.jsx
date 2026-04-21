@@ -3,7 +3,7 @@ import { siteData } from '../data/site';
 export default function Services() {
   return (
     <section id="services" className="py-24 bg-white relative">
-      {/* Parallax background pattern */}
+      <!-- Parallax background pattern -->
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: `repeating-linear-gradient(45deg, #000 0, #000 1px, transparent 0, transparent 50%)`,
         backgroundSize: '20px 20px'
