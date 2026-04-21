@@ -2,8 +2,14 @@ import { siteData } from '../data/site';
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-24 bg-white relative">
+      <!-- Parallax background pattern -->
+      <div className="absolute inset-0 opacity-[0.02]" style={{
+        backgroundImage: `repeating-linear-gradient(45deg, #000 0, #000 1px, transparent 0, transparent 50%)`,
+        backgroundSize: '20px 20px'
+      }}></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="section-header">
           <span className="badge mb-4">Our Services</span>
           <h2 className="section-title">FFL Transfer Services</h2>

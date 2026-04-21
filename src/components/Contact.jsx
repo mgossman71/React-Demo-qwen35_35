@@ -11,13 +11,29 @@ export default function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.name) newErrors.name = 'Name is required';
+    if (!formData.email) newErrors.email = 'Email is required';
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Invalid email';
+    if (!formData.subject) newErrors.subject = 'Subject is required';
+    if (!formData.message) newErrors.message = 'Message is required';
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real app, this would send to a backend
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    if (validateForm()) {
+      // In a real app, this would send to a backend
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      }, 5000);
+    }
   };
 
   const handleChange = (e) => {

@@ -9,7 +9,7 @@ export default function ScrollAnimations() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
+            entry.target.classList.add('animate');
             observer.unobserve(entry.target);
           }
         });
@@ -21,7 +21,7 @@ export default function ScrollAnimations() {
     );
 
     // Select all elements with scroll animation classes
-    const elements = document.querySelectorAll('[data-animate]');
+    const elements = document.querySelectorAll('.reveal-up');
     elements.forEach((el) => {
       animatedElements.current.push(el);
       observer.observe(el);
@@ -29,7 +29,7 @@ export default function ScrollAnimations() {
 
     return () => {
       animatedElements.current.forEach((el) => {
-        el.classList.remove('animate-in');
+        el.classList.remove('animate');
       });
     };
   }, []);
