@@ -3,8 +3,12 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
+# Copy config files first
 COPY package*.json ./
-RUN npm ci --only=production
+COPY postcss.config.js ./
+COPY tailwind.config.js ./
+
+RUN npm ci
 
 COPY . .
 RUN npm run build
