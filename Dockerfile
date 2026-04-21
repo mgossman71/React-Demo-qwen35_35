@@ -3,14 +3,16 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy config files first
+# Copy package files first
 COPY package*.json ./
-COPY postcss.config.js ./
-COPY tailwind.config.js ./
 
-RUN npm ci
+# Install all dependencies (including devDeps for build)
+RUN npm install
 
+# Copy source code
 COPY . .
+
+# Build the app
 RUN npm run build
 
 # Production stage
